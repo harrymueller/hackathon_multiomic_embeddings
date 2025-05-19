@@ -60,6 +60,10 @@
 | **LISI (Local Inverse Simpson’s Index)** | Diversity of labels in local neighborhoods         | Assessing batch mixing (*iLISI*) or conservation (*cLISI*)     | High (*iLISI*), Low (*cLISI*) |
 
 
+##### Using the cell types labels/annotation and clustering:
+
+
+
 
   - How to test for overintegration in RNA + ATAC integration
   Before integration, you remove one cell type (e.g. T cells) from the RNA data.

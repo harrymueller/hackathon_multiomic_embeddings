@@ -5,6 +5,7 @@
 - *STEP 1*
 
   Preprocessing scRNA-seq and scATAC-seq data
+  [Code](https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/scRNA_scATAC_Preprocessing.R)
 
   Converting to anndata
 

@@ -20,6 +20,10 @@
 
   Identify set of markers genes related to a cell type
 
+  The idea is that those markers should be localised together in the embedding as they are spefic to a cell type
+
+  The expression of those genes should not be sparse and not localised in 2 ore more neighborhood distant between each other
+  
   Computing metrics to evaluate biological conservation
   - Moran’s I
     [doc](https://scanpy.readthedocs.io/en/stable/generated/scanpy.metrics.morans_i.html)

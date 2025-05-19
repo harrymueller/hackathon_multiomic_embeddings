@@ -2,7 +2,7 @@
 ## 2025 OZ Single Cell Hackathon 
 ### Authors: Harry Mueller, Maria Nucera, Tayla Albertini, Chen Zhu
 
-- *STEP 1*
+## - *STEP 1*
 
   Preprocessing scRNA-seq and scATAC-seq data
   [Code](https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/scRNA_scATAC_Preprocessing.R)
@@ -11,13 +11,13 @@
 
   Adding cell type annotation
   
-- *STEP 2*
+## - *STEP 2*
   
   Integration with Harmony
 
   Testing different dimensionality reduction methods
 
-- *STEP 3*
+## - *STEP 3*
     
   #### Computing metrics to evaluate biological conservation
 

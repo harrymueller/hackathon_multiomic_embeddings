@@ -48,4 +48,20 @@
 
 
 
-  - Removing one cell type from RNA-seq before integration, and check if there is ATAC-seq in the neighbors of that cell type (there should not be, sign of overintegration)
+  - How to test for overintegration in RNA + ATAC integration
+  Before integration, you remove one cell type (e.g. T cells) from the RNA data.
+  So now your dataset has:
+
+  All cell types in ATAC
+
+  All cell types except T cells in RNA
+
+  Then you run your integration method.
+  After integration, you look at the cells that were originally T cells in the ATAC data.
+
+   You check:
+   Are the nearest neighbors of those ATAC T cells mostly RNA cells?
+
+  If yes →  Overintegration
+  The method falsely matched ATAC T cells with unrelated RNA cells
+  If no (they’re mostly surrounded by other ATAC cells or stay isolated) →  Good integration

@@ -8,6 +8,6 @@
 
   Converting to anndata
 
-  - *STEP 2
+- *STEP 2*
   
-    Integration
+  Integration

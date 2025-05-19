@@ -50,32 +50,12 @@
 
    Using the cell types labels/annotation:
 
-   - Silhouette Score
-What it measures:
-How well-separated the known cell types are in the integrated embedding.
-
-Calculated for each cell based on its distance to cells of the same vs. other types
-
-Higher score = clearer separation between cell types
-
-Interpretation:
-A high silhouette score indicates that cell types remain distinct and well-structured after integration.
-
-- Adjusted Rand Index (ARI)
-What it measures:
-How well the clusters (e.g., Leiden or Louvain) match the known cell type labels.
-
-Corrects for random chance
-
-Compares two clusterings: one from the integration, one from known labels
-
-Interpretation:
-High ARI means the integration preserved biological groupings, and clustering reflects real cell types.
-
-| **Metric**           | **Measures…**                                      | **Good for…**                                                  | **Ideal Value** |
 | -------------------- | -------------------------------------------------- | -------------------------------------------------------------- | --------------- |
-| **Silhouette Score** | Separation of known cell types in embedding        | Detecting whether cell types remain distinct after integration | Near **+1**     |
-| **kNN Purity**       | Fraction of a cell’s neighbors with the same label | Checking local consistency of cell type or modality            | Near **1.0**    |
+| **Metric**                               | **Measures…**                                      | **Good for…**                                                  | **Ideal Value**               |
+| ---------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- | ----------------------------- |
+| **Silhouette Score**                     | Separation of known cell types in embedding        | Detecting whether cell types remain distinct after integration | Near **+1**                   |
+| **kNN Purity**                           | Fraction of a cell’s neighbors with the same label | Checking local consistency of cell type or modality            | Near **1.0**                  |
+| **LISI (Local Inverse Simpson’s Index)** | Diversity of labels in local neighborhoods         | Assessing batch mixing (*iLISI*) or conservation (*cLISI*)     | High (*iLISI*), Low (*cLISI*) |
 
 
 

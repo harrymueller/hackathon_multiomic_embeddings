@@ -36,5 +36,10 @@
     | **Geary’s C** | Local dissimilarity | Patchiness or abrupt shifts | Near **0**  |
 
   - Custom function to compute spearman correlation between set of genes in close cells, far cells and random cells
-   
+
+
+   [Code](https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/Biological_conservation_metrics.ipynb)
+
+
+
   - Removing one cell type from RNA-seq before integration, and check if there is ATAC-seq in the neighbors of that cell type (there should not be, sign of overintegration)

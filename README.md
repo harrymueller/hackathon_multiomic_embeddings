@@ -21,7 +21,11 @@
   Identify set of markers genes related to a cell type
 
   Computing metrics to evaluate biological conservation
-  - Moran’s I (computes if gene expression is localised, but it will not distringuish between 2 disting neighborhoods far away from each other)
+  - Moran’s I
+    What it measures:
+    The global spatial autocorrelation of a variable (e.g., a gene’s expression) "how do similar values cluster together across the embedding?"
   - Geary’s C
+    What it measures:
+   The local spatial heterogeneity " how different each cell’s value is from its neighbors"
   - Custom function to compute spearman correlation between set of genes in close cells, far cells and random cells
   - Removing one cell type from RNA-seq before integration, and check if there is ATAC-seq in the neighbors of that cell type (there should not be, sign of overintegration)

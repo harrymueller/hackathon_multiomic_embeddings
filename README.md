@@ -26,9 +26,14 @@
     What it measures:
     The global spatial autocorrelation of a variable (e.g., a gene’s expression) "how do similar values cluster together across the embedding?"
   - Geary’s C
-    
+
     What it measures:
    The local spatial heterogeneity " how different each cell’s value is from its neighbors"
+
+    | Metric        | Measures…           | Good for…                   | Ideal Value |
+    | ------------- | ------------------- | --------------------------- | ----------- |
+    | **Moran’s I** | Global similarity   | Coherent gene expression    | Near **+1** |
+    | **Geary’s C** | Local dissimilarity | Patchiness or abrupt shifts | Near **0**  |
 
   - Custom function to compute spearman correlation between set of genes in close cells, far cells and random cells
    

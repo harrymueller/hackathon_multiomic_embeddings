@@ -40,7 +40,7 @@
   - Custom function to compute spearman correlation between set of genes in close cells, far cells and random cells
 
 
-   [Code](https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/Biological_conservation_metrics.ipynb)
+   [Code]((https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/Biological_conservation_metrics%20(1).ipynb))
 
 
 

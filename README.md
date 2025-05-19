@@ -50,7 +50,6 @@
 
    Using the cell types labels/annotation:
 
-| -------------------- | -------------------------------------------------- | -------------------------------------------------------------- | --------------- |
 | **Metric**                               | **Measures…**                                      | **Good for…**                                                  | **Ideal Value**               |
 | ---------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- | ----------------------------- |
 | **Silhouette Score**                     | Separation of known cell types in embedding        | Detecting whether cell types remain distinct after integration | Near **+1**                   |

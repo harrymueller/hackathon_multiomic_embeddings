@@ -5,3 +5,9 @@
 - *STEP 1*
 
   Preprocessing scRNA-seq and scATAC-seq data
+
+  Converting to anndata
+
+  - *STEP 2
+  
+    Integration

@@ -22,10 +22,12 @@
 
   Computing metrics to evaluate biological conservation
   - Moran’s I
+    [doc](https://scanpy.readthedocs.io/en/stable/generated/scanpy.metrics.morans_i.html)
     
     What it measures:
     The global spatial autocorrelation of a variable (e.g., a gene’s expression) "how do similar values cluster together across the embedding?"
   - Geary’s C
+    [doc[(https://scanpy.readthedocs.io/en/stable/generated/scanpy.metrics.gearys_c.html)
 
     What it measures:
    The local spatial heterogeneity " how different each cell’s value is from its neighbors"

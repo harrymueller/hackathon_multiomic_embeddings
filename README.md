@@ -19,9 +19,9 @@
 
 - *STEP 3*
     
--  Computing metrics to evaluate biological conservation
+  #### Computing metrics to evaluate biological conservation
 
-  Indipendent from labels
+  ##### Indipendent from labels
 
   Identify set of markers genes related to a cell type
 
@@ -51,7 +51,7 @@
    [Code]((https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/Biological_conservation_metrics%20(1).ipynb))
 
 
-   Using the cell types labels/annotation:
+##### Using the cell types labels/annotation:
 
 | **Metric**                               | **Measures…**                                      | **Good for…**                                                  | **Ideal Value**               |
 | ---------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- | ----------------------------- |

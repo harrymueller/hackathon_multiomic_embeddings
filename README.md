@@ -10,4 +10,12 @@
 
 - *STEP 2*
   
-  Integration
+  Integration with Harmony
+
+- *STEP 3*
+
+  Testing different dimensionality reduction methods
+
+- *STEP 4*
+
+  Computing metrics to evaluate biological conservation

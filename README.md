@@ -13,7 +13,7 @@
   
 ## - *STEP 2*
   
-  Integration with Harmony
+  Integration with Seurat
 
   Testing different dimensionality reduction methods
 

@@ -14,11 +14,9 @@
   
   Integration with Harmony
 
-- *STEP 3*
-
   Testing different dimensionality reduction methods
 
-- *STEP 4*
+- *STEP 3*
 
   Computing metrics to evaluate biological conservation
   - Moran’s I (computes if gene expression is localised, but it will not distringuish between 2 disting neighborhoods far away from each other)

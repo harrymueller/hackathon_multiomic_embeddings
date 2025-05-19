@@ -8,6 +8,8 @@
 
   Converting to anndata
 
+  Adding cell type annotation
+  
 - *STEP 2*
   
   Integration with Harmony

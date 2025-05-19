@@ -48,6 +48,50 @@
    [Code]((https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/Biological_conservation_metrics%20(1).ipynb))
 
 
+   Using the cell types labels/annotation:
+
+   - Silhouette Score
+What it measures:
+How well-separated the known cell types are in the integrated embedding.
+
+Calculated for each cell based on its distance to cells of the same vs. other types
+
+Higher score = clearer separation between cell types
+
+Value range:
+
+1.0 = perfectly separated
+
+0.0 = overlapping
+
+< 0 = poorly clustered
+
+Interpretation:
+A high silhouette score indicates that cell types remain distinct and well-structured after integration.
+
+- Adjusted Rand Index (ARI)
+What it measures:
+How well the clusters (e.g., Leiden or Louvain) match the known cell type labels.
+
+Corrects for random chance
+
+Compares two clusterings: one from the integration, one from known labels
+
+Value range:
+
+1.0 = perfect match
+
+0.0 = random overlap
+
+< 0 = worse than random
+
+Interpretation:
+High ARI means the integration preserved biological groupings, and clustering reflects real cell types.
+
+
+ 
+     
+
 
   - How to test for overintegration in RNA + ATAC integration
   Before integration, you remove one cell type (e.g. T cells) from the RNA data.

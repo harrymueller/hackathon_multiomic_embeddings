@@ -21,7 +21,7 @@
     
   #### Computing metrics to evaluate biological conservation
 
-  ##### Indipendent from labels
+  ##### Indipendent from labels (no annotation required just basic knowledge of gene expression patterns in the system)
 
   Identify set of markers genes related to a cell type
 
@@ -51,7 +51,7 @@
    [Code](https://github.com/harrymueller/hackathon_multiomic_embeddings/blob/main/Biological_conservation_metrics%20(2).ipynb)
 
 
-##### Using the cell types labels/annotation:
+##### Using the cell types labels/annotation  (no clustering required) :
 
 | **Metric**                               | **Measures…**                                      | **Good for…**                                                  | **Ideal Value**               |
 | ---------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- | ----------------------------- |
@@ -62,6 +62,10 @@
 
 ##### Using the cell types labels/annotation and clustering:
 
+| **Metric**                              | **Measures…**                                     | **Good for…**                                    | **Ideal Value**   |
+| --------------------------------------- | ------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| **Adjusted Rand Index (ARI)**           | Similarity between clustering and true labels     | Evaluating how well clustering recovers biology  | Near **+1**       |
+| **NMI (Normalized Mutual Information)** | Overall agreement between labels and clusters     | Evaluating information shared between partitions | Near **1.0**      |
 
 
 

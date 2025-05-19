@@ -58,14 +58,6 @@ Calculated for each cell based on its distance to cells of the same vs. other ty
 
 Higher score = clearer separation between cell types
 
-Value range:
-
-1.0 = perfectly separated
-
-0.0 = overlapping
-
-< 0 = poorly clustered
-
 Interpretation:
 A high silhouette score indicates that cell types remain distinct and well-structured after integration.
 
@@ -77,17 +69,14 @@ Corrects for random chance
 
 Compares two clusterings: one from the integration, one from known labels
 
-Value range:
-
-1.0 = perfect match
-
-0.0 = random overlap
-
-< 0 = worse than random
-
 Interpretation:
 High ARI means the integration preserved biological groupings, and clustering reflects real cell types.
 
+| **Metric**                              | **Measures…**                                           | **Good for…**                                                  | **Ideal Value**   |
+| --------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------- | ----------------- |
+| **Silhouette Score**                    | Separation of known cell types in embedding             | Detecting whether cell types remain distinct after integration | Near **+1**       |
+| **Adjusted Rand Index (ARI)**           | Agreement between clustering and true labels            | Quantifying how well clustering recovers cell types            | Near **+1**       |
+| **Batch/Modality Mixing per Cell Type** | Proportion of modalities within each cell type          | Checking if same cell types mix across datasets                | Evenly mixed      |
 
  
      

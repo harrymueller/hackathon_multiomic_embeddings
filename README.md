@@ -31,5 +31,5 @@
    The local spatial heterogeneity " how different each cell’s value is from its neighbors"
 
   - Custom function to compute spearman correlation between set of genes in close cells, far cells and random cells
-  - 
+   
   - Removing one cell type from RNA-seq before integration, and check if there is ATAC-seq in the neighbors of that cell type (there should not be, sign of overintegration)

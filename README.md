@@ -72,14 +72,11 @@ Compares two clusterings: one from the integration, one from known labels
 Interpretation:
 High ARI means the integration preserved biological groupings, and clustering reflects real cell types.
 
-| **Metric**                              | **Measures…**                                           | **Good for…**                                                  | **Ideal Value**   |
-| --------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------- | ----------------- |
-| **Silhouette Score**                    | Separation of known cell types in embedding             | Detecting whether cell types remain distinct after integration | Near **+1**       |
-| **Adjusted Rand Index (ARI)**           | Agreement between clustering and true labels            | Quantifying how well clustering recovers cell types            | Near **+1**       |
-| **Batch/Modality Mixing per Cell Type** | Proportion of modalities within each cell type          | Checking if same cell types mix across datasets                | Evenly mixed      |
+| **Metric**           | **Measures…**                                      | **Good for…**                                                  | **Ideal Value** |
+| -------------------- | -------------------------------------------------- | -------------------------------------------------------------- | --------------- |
+| **Silhouette Score** | Separation of known cell types in embedding        | Detecting whether cell types remain distinct after integration | Near **+1**     |
+| **kNN Purity**       | Fraction of a cell’s neighbors with the same label | Checking local consistency of cell type or modality            | Near **1.0**    |
 
- 
-     
 
 
   - How to test for overintegration in RNA + ATAC integration

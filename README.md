@@ -2,6 +2,6 @@
 ## 2025 OZ Single Cell Hackathon 
 ### Authors: Harry Mueller, Maria Nucera, Tayla Albertini, Chen Zhu
 
-- *STEP 1
+- *STEP 1*
 
   Preprocessing scRNA-seq and scATAC-seq data

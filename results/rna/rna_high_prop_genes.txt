@@ -1,0 +1,3 @@
+monocyte_markers: FCN1
+dendritic_cell_markers: CLEC9A
+megakaryocyte_markers: PF4

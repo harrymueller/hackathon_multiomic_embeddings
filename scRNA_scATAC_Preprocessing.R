@@ -206,7 +206,7 @@ plot2 <- DimPlot(
 
 plot1 + plot2
 
-saveRDS(ATAC,file='D:/Hackathon/Annotated_processed_unpaired_ATAC.RDS')
+#saveRDS(ATAC,file='D:/Hackathon/Annotated_processed_unpaired_ATAC.RDS')
 
 
 
@@ -232,11 +232,14 @@ coembed <- merge(x = RNA, y = ATAC)
 coembed <- ScaleData(coembed, features = genes.use, do.scale = FALSE)
 coembed <- RunPCA(coembed, features = genes.use, verbose = FALSE)
 coembed <- RunUMAP(coembed, dims = 1:30)
-genes.use <- VariableFeatures(RNA)
-coembed <- RunCCA(RNA, ATAC, features = genes.use)
+
 
 DimPlot(coembed, group.by = "dataset", reduction='umap')
 
+genes.use <- VariableFeatures(RNA)
+coembed <- RunCCA(RNA, ATAC, features = genes.use)
+
+DimPlot(coembed, group.by = "dataset", reduction='cca')
 
 integrated_cca_mat <- Embeddings(coembed, reduction = "cca")
 
@@ -331,6 +334,22 @@ bmmcLiger <- runCluster(bmmcLiger, nNeighbors = 30, resolution = 0.2)
 
 bmmcLiger <- runUMAP(bmmcLiger, nNeighbors = 30, minDist = 0.3)
 
+
+ATAC <- RenameCells(ATAC, new.names = paste0("atac_", colnames(ATAC)))
+
+RNA <- RenameCells(RNA, new.names = paste0("rna_", colnames(RNA)))
+
+rna_celltypes <- data.frame(cell = colnames(RNA), Celltype = RNA$Celltype)
+atac_celltypes <- data.frame(cell = colnames(ATAC), Celltype = ATAC$predicted.id)
+
+all_celltypes <- rbind(rna_celltypes, atac_celltypes)
+rownames(all_celltypes) <- all_celltypes$cell  # 对齐为 cell barcode 索引
+
+meta <- as.data.frame(bmmcLiger@cellMeta)
+meta$Celltype <- all_celltypes[rownames(meta), "Celltype"]
+bmmcLiger@cellMeta <- S4Vectors::DataFrame(meta)
+bmmcLiger@cellMeta$leiden_cluster <- bmmcLiger@cellMeta$Celltype
+
 options(ligerDotSize = 0.5)
 plotByDatasetAndCluster(bmmcLiger)
 
@@ -362,5 +381,6 @@ atac_df_sub <- atac_df[, common_genes]
 expr_combined <- rbind(rna_df_sub, atac_df_sub)
 write.csv(expr_combined, "D:/Hackathon/liger_cell_gene_expression_combined.csv")
 
-
+liger_umap_embedding <- bmmcLiger@dimReds[["UMAP"]]
+write.csv(liger_umap_embedding, "D:/Hackathon/liger_NMF_UMAP.csv")
 
